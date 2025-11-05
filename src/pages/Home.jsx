@@ -40,7 +40,7 @@ function Hero() {
               and demonstrating His love through compassionate action.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
-              <a href="/events" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold py-4 px-8 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg">Join Us This Sunday</a>
+              <a href="/event" className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-bold py-4 px-8 rounded-full hover:scale-105 transition-transform duration-300 shadow-lg">Join Us This Sunday</a>
               <a href="/give" className="bg-white/10 backdrop-blur-sm text-white font-bold py-4 px-8 rounded-full hover:bg-white/20 transition-all duration-300 border-2 border-white/50">Give Online</a>
             </div>
             <blockquote className="text-lg text-white/80 italic border-l-4 border-yellow-500 pl-6 max-w-2xl mx-auto">
