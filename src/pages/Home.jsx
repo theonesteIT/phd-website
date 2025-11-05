@@ -177,14 +177,14 @@ function About() {
                 <span className="text-2xl">🙏</span>
               </div>
               <h4 className="font-bold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-2">Wednesday Prayer</h4>
-              <p className="text-black/80 font-medium">9:00 AM - 6:00 PM</p>
+              <p className="text-black/80 font-medium">10:00 AM - 4:00 PM</p>
             </div>
             <div className="text-center group">
               <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">👨‍👩‍👧‍👦</span>
               </div>
               <h4 className="font-bold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-2">Friday Service</h4>
-              <p className="text-black/80 font-medium">6:00 PM - 7:30 PM</p>
+              <p className="text-black/80 font-medium">5:30 PM - 7:30 PM</p>
             </div>
           </div>
         </div>
