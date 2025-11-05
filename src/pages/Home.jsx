@@ -197,8 +197,8 @@ function LatestNews() {
   const latestNews = [
     {
       id: 1,
-      title: "PHDM Empowers Women Through Ibitenge Support Program",
-      excerpt: "We're proud to support women in our community through a new initiative that provides ibitenge, promoting unity, self-confidence, and empowerment.",
+      title: "PHDM Empowers Women Through Igitenge Support Program",
+      excerpt: "We're proud to support women in our community through a new initiative that provides Igitenge, promoting unity, self-confidence, and empowerment.",
       image: "/images/events-worked/women1.jpg",
       category: "Ministry Update",
       date: "December 15, 2024",
@@ -206,8 +206,8 @@ function LatestNews() {
     },
     {
       id: 2,
-      title: "PHDM Spreads Love and Rest Through Mattress Distribution for Women",
-      excerpt: "Join us as we come together to celebrate the true meaning of Christmas — love, hope, and giving. This special day will include heartfelt worship, a joyful community feast, and gift distribution to bless families in need. Let’s share the light of Christ through kindness and togetherness.",
+      title: "PHDM Spreads Love  Through Mattress Distribution for single mothers",
+      excerpt: "PHDM is committed to transforming lives through our Support and Training Program. This initiative equips participants with practical skills, mentorship, and guidance to help them build sustainable livelihoods. By empowering individuals with knowledge and confidence, we’re creating lasting change and stronger communities.",
       image: "/images/events-worked/women6.jpg",
       category: "Event",
       date: "December 12, 2024",
@@ -215,7 +215,7 @@ function LatestNews() {
     },
     {
       id: 3,
-      title: "Sharing God’s Care — PHDM Provides Mutuelle de Santé for Familly",
+      title: "PHDM Provides Mutuelle de Santé for Famillies",
       excerpt: "PHDM is proud to support vulnerable families by providing Mutuelle de Santé health insurance. This initiative ensures that every family has access to essential healthcare services, promoting dignity, security, and hope for a healthier future.",
       image: "/images/news/3.jpg",
       category: "Community",
