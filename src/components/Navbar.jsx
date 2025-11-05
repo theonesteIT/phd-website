@@ -118,13 +118,14 @@ function Navbar() {
             <nav className="p-6">
               <ul className="space-y-4">
                 {[
-                  { to: '/', label: 'Home', icon: '🏠' },
-                  { to: '/about', label: 'About', icon: 'ℹ️' },
-                  { to: '/team', label: 'Team', icon: '👥' },
-                  { to: '/news', label: 'News', icon: '📰' },
-                  { to: '/events', label: 'Events', icon: '📅' },
-                  { to: '/give', label: 'Support', icon: '💝' },
-                  { to: '/contact', label: 'Contact', icon: '📞' },
+                 { to: '/', label: 'Home' },
+              { to: '/about', label: 'About' },
+        
+              { to: '/news', label: 'News' },
+              { to: '/events', label: 'Events' },
+              { to: '/give', label: 'Support' },
+              { to: '/contact', label: 'Contact' },
+              { to: '/gallery', label: 'Gallery' },
                 ].map(({ to, label, icon }) => (
                   <li key={to}>
                     <NavLink
