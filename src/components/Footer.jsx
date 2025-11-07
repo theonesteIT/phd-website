@@ -32,7 +32,7 @@ function Footer() {
           <p className="text-sm text-gray-200 mb-1">
             📧 phdmministry@gmail.com
           </p>
-          <p className="text-sm text-gray-200">📞 +250 788 560 756</p>
+          <p className="text-sm text-gray-200">📞 +250 788 560 756/0783140316</p>
         </div>
 
         {/* === Column 3: Google Map === */}

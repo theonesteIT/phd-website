@@ -8,7 +8,7 @@ function ContactPage() {
     },
     {
       title: 'Call Us',
-      description: '+250788560756',
+      description: '+250788560756/ +250783140316',
       icon: '📞',
       color: 'from-green-500 to-emerald-600'
     },
@@ -63,11 +63,11 @@ function ContactPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="font-semibold text-black">Wednesday Prayer</span>
-                  <span className="text-black/80">7:00 PM - 8:30 PM</span>
+                  <span className="text-black/80">10:00 AM - 4:00 PM</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="font-semibold text-black">Friday Youth</span>
-                  <span className="text-black/80">6:30 PM - 8:00 PM</span>
+                  <span className="font-semibold text-black">Friday Service</span>
+                  <span className="text-black/80">17:30 PM - 7:30 PM</span>
                 </div>
               </div>
             </div>

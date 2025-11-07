@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, Phone, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, Linkedin } from 'lucide-react'
 
 function TeamMemberCard({ member, index }) {
   const [imageError, setImageError] = useState(false)
@@ -17,7 +17,7 @@ function TeamMemberCard({ member, index }) {
             <div className="w-full h-full rounded-3xl bg-white p-2">
               {!imageError ? (
                 <img
-                  src={`/images/team/avatar-${index + 1}.jpg`}
+                  src={member.image}
                   alt={member.name}
                   className="w-full h-full rounded-2xl object-cover"
                   onError={() => setImageError(true)}
@@ -88,12 +88,12 @@ function AboutPage() {
     {
       name: "MUTETELI Eugenie",
       position: "President",
-      role: "Legal Representative"
+      image:"images/events-worked/paster1.jpg",
     },
     {
       name: "NIMEPATA MUHOZI Paul",
       position: "Vice President", 
-      role: "Deputy Legal Representative"
+      image:"images/events-worked/paster22.jpg",
     }
   ]
 
@@ -116,7 +116,7 @@ function AboutPage() {
               <div className="relative h-96 md:h-auto">
                 {!welcomeImageError ? (
                   <img
-                    src="/images/home/image1.jpg"
+                    src="/images/events-worked/ministry.jpg"
                     alt="PHD Ministry Welcome"
                     className="w-full h-full object-cover"
                     onError={() => setWelcomeImageError(true)}
@@ -143,13 +143,13 @@ function AboutPage() {
                   A Place to Call <span className="text-orange-500">Home</span>
                 </h2>
                 <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                  We are a Christ-centered church devoted to worship, discipleship,
-                  and service. Our heart is to see people transformed by the Gospel and
+                  We are a Christ-centered Ministry devoted to worship, discipleship,
+                  and service. Our Goal is to see people transformed by the Gospel and
                   equipped to impact the world.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   Join us for vibrant services, authentic community, and opportunities
-                  to serve. We believe church is a family where everyone has a part.
+                  to serve. We believe our ministry is a family where everyone has a role to play.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a href="#service-times" className="px-6 py-3 bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-bold rounded-xl hover:shadow-lg transition-all duration-300">
@@ -176,8 +176,8 @@ function AboutPage() {
                 <h2 className="text-3xl font-bold text-black">Our Mission</h2>
               </div>
               <p className="text-gray-700 leading-relaxed text-lg">
-                To bring people into a personal relationship with Jesus Christ through prayer, 
-                healing, and the power of the Holy Spirit, transforming lives and communities.
+                To equip community members with knowledge of God's Words, skills for social well-bieng and strategies
+                for personal development.
               </p>
             </div>
           </div>
@@ -192,8 +192,7 @@ function AboutPage() {
                 <h2 className="text-3xl font-bold text-black">Our Vision</h2>
               </div>
               <p className="text-gray-700 leading-relaxed text-lg">
-                To see a Spirit-filled generation walking in faith, love, and divine purpose, 
-                impacting the world with God's love and power.
+               To ensure the members of community prosper in spirit ,soul and body. " 3 Johns 3:2"
               </p>
             </div>
           </div>
@@ -205,25 +204,60 @@ function AboutPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do</p>
           </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-            {[
-              { name: 'Faith', desc: 'Trusting in God\'s promises', icon: '🙏' },
-              { name: 'Prayer', desc: 'Communion with our Father', icon: '💫' },
-              { name: 'Healing', desc: 'Restoration and wholeness', icon: '❤️' },
-              { name: 'Discipleship', desc: 'Growing in Christ', icon: '📖' },
-              { name: 'Compassion', desc: 'Love in action', icon: '🤝' }
-            ].map((value) => (
-              <div key={value.name} className="bg-white rounded-3xl shadow-lg p-8 text-center border border-gray-100 hover:shadow-2xl hover:scale-105 transition-all duration-300 group relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-yellow-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="relative">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-3xl">{value.icon}</span>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white rounded-3xl shadow-xl p-10 md:p-14 border border-gray-100 hover:shadow-2xl transition-all duration-300 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/5 to-yellow-400/5 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-orange-500/5 to-yellow-400/5 rounded-full -ml-16 -mb-16 group-hover:scale-150 transition-transform duration-500" />
+              <div className="relative">
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <span className="text-2xl">🙏</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Faith</h3>
+                      <p className="text-gray-600">Trusting in God's promises and walking by faith, not by sight</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-3">{value.name}</h3>
-                  <p className="text-gray-600">{value.desc}</p>
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <span className="text-2xl">💫</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Prayer</h3>
+                      <p className="text-gray-600">Communion with our Father through constant prayer and intercession</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <span className="text-2xl">❤️</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Healing</h3>
+                      <p className="text-gray-600">Restoration and wholeness through the power of the Holy Spirit</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <span className="text-2xl">📖</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Discipleship</h3>
+                      <p className="text-gray-600">Growing in Christ through teaching and mentorship</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 md:col-span-2 max-w-md mx-auto">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
+                      <span className="text-2xl">🤝</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Compassion</h3>
+                      <p className="text-gray-600">Love in action, serving others with kindness and grace</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
@@ -239,11 +273,11 @@ function AboutPage() {
                 <h3 className="text-2xl font-bold text-black">Our Story</h3>
               </div>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                In 2016, our story began not in a large auditorium, but in a humble living room. It started as a small prayer group—a handful of faithful hearts who believed in the transformative 
+                In 2016, our story began not in a large auditorium, but in a humble  room. It started as a small prayer group—a handful of faithful hearts who believed in the transformative 
                 power of the Holy Spirit. We gathered with a simple, yet bold vision: to see lives radically changed by the love of Jesus Christ.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Today, we serve thousands across our community, providing spiritual guidance, healing, and hope to all who seek God's love.
+                Today, we serve thousands across our community, providing spiritual guidance,for social economic empowerment, healing, and hope for all.
               </p>
             </div>
           </div>
@@ -270,7 +304,7 @@ function AboutPage() {
         <div className="mb-24">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold text-black mb-4">
-              Meet Our <span className="text-orange-500">Board</span>
+              Meet Our <span className="text-orange-500">Leaders</span>
             </h2>
             <div className="mx-auto h-1 w-24 bg-gradient-to-r from-orange-500 via-yellow-400 to-orange-500 mb-6" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -290,7 +324,7 @@ function AboutPage() {
             <div className="bg-gradient-to-br from-orange-500/10 via-yellow-400/10 to-orange-500/10 rounded-3xl shadow-xl p-10 md:p-14 border border-orange-200">
               <h3 className="text-3xl font-bold text-center bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-8">Our Leadership Commitment</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-10 text-center max-w-3xl mx-auto">
-                Each board member serves with integrity, wisdom, and a deep commitment to our community. 
+                Our Leaders serves with integrity, wisdom, and a deep commitment to our community. 
                 Together, they ensure that PHDM remains a beacon of hope, healing, and transformation for all who seek God's love and purpose.
               </p>
               <div className="grid gap-8 sm:grid-cols-3">
@@ -341,7 +375,7 @@ function AboutPage() {
                   <span className="text-4xl">🙏</span>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">Wednesday Prayer</h3>
-                <p className="text-white font-bold text-xl mb-2">9:00 AM - 6:00 PM</p>
+                <p className="text-white font-bold text-xl mb-2">10:00 AM - 4:00 PM</p>
                 <p className="text-gray-300">Corporate Prayer and Intercession</p>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20">

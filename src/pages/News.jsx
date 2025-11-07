@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function SectionHeading({ title, accent, isDark = false }) {
   return (
@@ -11,7 +12,7 @@ function SectionHeading({ title, accent, isDark = false }) {
   )
 }
 
-function NewsCard({ article, featured = false }) {
+function NewsCard({ article, featured = false, onReadMore }) {
   const [imageError, setImageError] = useState(false)
   
   return (
@@ -87,7 +88,10 @@ function NewsCard({ article, featured = false }) {
               <span className="text-sm text-gray-600">{article.author}</span>
             </div>
             
-            <button className="text-orange-500 hover:text-yellow-500 font-semibold text-sm transition-colors duration-300 flex items-center gap-1 group">
+            <button 
+              onClick={() => onReadMore(article.id)}
+              className="text-orange-500 hover:text-yellow-500 font-semibold text-sm transition-colors duration-300 flex items-center gap-1 group"
+            >
               Read More
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
             </button>
@@ -99,6 +103,8 @@ function NewsCard({ article, featured = false }) {
 }
 
 function News() {
+  const navigate = useNavigate()
+  
   const newsArticles = [
     {
       id: 1,
@@ -139,6 +145,10 @@ function News() {
   const filteredNews = selectedCategory === 'All' 
     ? newsArticles 
     : newsArticles.filter(article => article.category === selectedCategory)
+
+  const handleReadMore = (articleId) => {
+    navigate(`/news/${articleId}`)
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
@@ -181,7 +191,7 @@ function News() {
             <div className="mb-16">
               <h3 className="text-2xl font-bold text-black mb-8 text-center">Featured Story</h3>
               <div className="max-w-4xl mx-auto">
-                <NewsCard article={newsArticles[0]} featured={true} />
+                <NewsCard article={newsArticles[0]} featured={true} onReadMore={handleReadMore} />
               </div>
             </div>
           )}
@@ -189,7 +199,7 @@ function News() {
           {/* News Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {filteredNews.slice(selectedCategory === 'All' ? 1 : 0).map((article) => (
-              <NewsCard key={article.id} article={article} />
+              <NewsCard key={article.id} article={article} onReadMore={handleReadMore} />
             ))}
           </div>
 

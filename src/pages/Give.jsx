@@ -5,26 +5,7 @@ function GivePage() {
   const [showMomoModal, setShowMomoModal] = useState(false)
   const [copied, setCopied] = useState(false)
 
-  const givingTypes = [
-    {
-      title: 'Tithe & Offering',
-      description: 'Regular giving to support ministry operations',
-      amount: '10% of income',
-      icon: <Heart className="w-6 h-6" />
-    },
-    {
-      title: 'Special Projects',
-      description: 'Support specific ministry initiatives',
-      amount: 'Any amount',
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      title: 'Missions',
-      description: 'Help us reach the world with the Gospel',
-      amount: 'Any amount',
-      icon: <Globe className="w-6 h-6" />
-    }
-  ]
+
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text)
@@ -42,7 +23,7 @@ function GivePage() {
           </h1>
           <div className="mx-auto h-1 w-20 sm:w-32 bg-gradient-to-r from-orange-500 to-yellow-400 rounded-full" />
           <p className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-            Your giving helps us reach more people with the Gospel, care for families, and expand God's kingdom.
+            Your giving helps us reach more people with the Gospel, care for vurnulable peaple, and expand God's kingdom.
           </p>
         </div>
 
@@ -168,30 +149,11 @@ function GivePage() {
           </div>
         </div>
 
-        {/* Ways to Give */}
-        <div className="mb-12 sm:mb-20 px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-8 sm:mb-12">Ways to Give</h2>
-          <div className="grid gap-4 sm:gap-6 md:grid-cols-3">
-            {givingTypes.map((type) => (
-              <div key={type.title} className="bg-white rounded-3xl p-5 sm:p-6 border border-gray-200 hover:border-orange-300 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-                <div className="flex items-start mb-4">
-                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-orange-100 to-yellow-100 flex items-center justify-center mr-3 sm:mr-4 border border-orange-200 flex-shrink-0 text-orange-500">
-                    {type.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 break-words">{type.title}</h3>
-                    <p className="text-orange-500 text-xs sm:text-sm font-semibold">{type.amount}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{type.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Impact Statement */}
         <div className="bg-gradient-to-br from-white to-orange-50 rounded-3xl p-6 sm:p-8 md:p-12 text-center border border-orange-200 shadow-xl mx-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Your Impact</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Our Impact</h2>
           <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-3 mb-6 sm:mb-8">
             <div className="text-center bg-white rounded-2xl p-4 sm:p-6 shadow-md">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">500+</div>

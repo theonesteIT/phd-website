@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function SectionHeading({ title, accent, isDark = false }) {
   return (
@@ -20,7 +21,7 @@ function Hero() {
           autoPlay
           loop
           muted
-          playsInlineu
+          playsInline
           className="w-full h-full object-cover"
         >
           <source src="video.mp4" type="video/mp4" />
@@ -36,7 +37,7 @@ function Hero() {
               <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">Find Meaning. Find Hope.</span><br />
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-             We are dedicated to transforming lives and renewing our community by proclaiming the Gospel of Jesus Christ
+              We are dedicated to transforming lives and renewing our community by proclaiming the Gospel of Jesus Christ
               and demonstrating His love through compassionate action.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center">
@@ -53,9 +54,9 @@ function Hero() {
   )
 }
 
-
-
 function WhatWeDo() {
+  const navigate = useNavigate()
+
   const programs = [
     {
       title: 'Evangelism & Worship',
@@ -114,7 +115,7 @@ function WhatWeDo() {
         </p>
         
         <div className="grid gap-8 lg:grid-cols-2">
-          {programs.map((program, index) => (
+          {programs.map((program) => (
             <div key={program.title} className="bg-white rounded-3xl p-8 shadow-lg group hover:shadow-2xl transition-all duration-500">
               <div className="flex items-start mb-6">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center mr-6 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -127,13 +128,10 @@ function WhatWeDo() {
               </div>
               
               <div className="space-y-3">
-                <h4 className="font-semibold text-black mb-3 flex items-center">
-                  
-                  Key Activities:
-                </h4>
+                <h4 className="font-semibold text-black mb-3">Key Activities:</h4>
                 <ul className="space-y-2">
-                  {program.activities.map((activity, activityIndex) => (
-                    <li key={activityIndex} className="flex items-start text-black/75">
+                  {program.activities.map((activity, index) => (
+                    <li key={index} className="flex items-start text-black/75">
                       <span className="text-yellow-500 mr-3 mt-1">•</span>
                       <span className="leading-relaxed">{activity}</span>
                     </li>
@@ -144,7 +142,6 @@ function WhatWeDo() {
           ))}
         </div>
         
-        {/* Impact Statement */}
         <div className="mt-16 bg-gradient-to-r from-orange-500/10 to-yellow-500/10 rounded-3xl p-8 shadow-lg text-center">
           <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-4">Our Impact</h3>
           <p className="text-black/80 text-lg leading-relaxed max-w-4xl mx-auto">
@@ -157,35 +154,27 @@ function WhatWeDo() {
     </section>
   )
 }
+
 function About() {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        {/* Service Times */}
         <div className="bg-gradient-to-br from-yellow-500/10 to-orange-500/10 rounded-3xl p-8 shadow-lg">
           <h3 className="text-2xl font-bold text-black mb-8 text-center">Join Us This Week</h3>
           <div className="grid gap-6 sm:grid-cols-3">
-            <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">⛪</span>
+            {[
+              { icon: '⛪', title: 'Sunday Service', time: '10:00 AM - 12:00 PM' },
+              { icon: '🙏', title: 'Wednesday Prayer', time: '10:00 AM - 4:00 PM' },
+              { icon: '👨‍👩‍👧‍👦', title: 'Friday Service', time: '5:30 PM - 7:30 PM' }
+            ].map((service, i) => (
+              <div key={i} className="text-center group">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">{service.icon}</span>
+                </div>
+                <h4 className="font-bold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-2">{service.title}</h4>
+                <p className="text-black/80 font-medium">{service.time}</p>
               </div>
-              <h4 className="font-bold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-2">Sunday Service</h4>
-              <p className="text-black/80 font-medium">10:00 AM - 12:00 PM</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">🙏</span>
-              </div>
-              <h4 className="font-bold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-2">Wednesday Prayer</h4>
-              <p className="text-black/80 font-medium">10:00 AM - 4:00 PM</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-2xl">👨‍👩‍👧‍👦</span>
-              </div>
-              <h4 className="font-bold text-lg bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent mb-2">Friday Service</h4>
-              <p className="text-black/80 font-medium">5:30 PM - 7:30 PM</p>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -194,6 +183,8 @@ function About() {
 }
 
 function LatestNews() {
+  const navigate = useNavigate()
+
   const latestNews = [
     {
       id: 1,
@@ -206,8 +197,8 @@ function LatestNews() {
     },
     {
       id: 2,
-      title: "PHDM Spreads Love  Through Mattress Distribution for single mothers",
-      excerpt: "PHDM is committed to transforming lives through our Support and Training Program. This initiative equips participants with practical skills, mentorship, and guidance to help them build sustainable livelihoods. By empowering individuals with knowledge and confidence, we’re creating lasting change and stronger communities.",
+      title: "PHDM Spreads Love Through Mattress Distribution for Single Mothers",
+      excerpt: "PHDM is committed to transforming lives through our Support and Training Program. This initiative equips participants with practical skills, mentorship, and guidance to help them build sustainable livelihoods.",
       image: "/images/events-worked/women6.jpg",
       category: "Event",
       date: "December 12, 2024",
@@ -215,8 +206,8 @@ function LatestNews() {
     },
     {
       id: 3,
-      title: "PHDM Provides Mutuelle de Santé for Famillies",
-      excerpt: "PHDM is proud to support vulnerable families by providing Mutuelle de Santé health insurance. This initiative ensures that every family has access to essential healthcare services, promoting dignity, security, and hope for a healthier future.",
+      title: "PHDM Provides Mutuelle de Santé for Families",
+      excerpt: "PHDM is proud to support vulnerable families by providing Mutuelle de Santé health insurance. This initiative ensures that every family has access to essential healthcare services.",
       image: "/images/news/3.jpg",
       category: "Community",
       date: "December 10, 2024",
@@ -232,47 +223,37 @@ function LatestNews() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mb-12">
           {latestNews.map((article) => (
             <article key={article.id} className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-orange-500/30">
-              <div className="relative">
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                      article.category === 'Ministry Update' ? 'bg-orange-500 text-white' :
-                      article.category === 'Event' ? 'bg-yellow-500 text-black' :
-                      'bg-green-500 text-white'
-                    }`}>
-                      {article.category}
-                    </span>
-                  </div>
-                </div>
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-                    <span>📅</span>
-                    <time>{article.date}</time>
-                    <span>•</span>
-                    <span>{article.readTime} read</span>
-                  </div>
-                  
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-orange-500 transition-colors duration-300">
-                    {article.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed text-sm">
-                    {article.excerpt}
-                  </p>
-                  
-                 
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
+                  <span>📅</span>
+                  <time>{article.date}</time>
+                  <span>•</span>
+                  <span>{article.readTime} read</span>
                 </div>
+                
+                <h3 className="text-lg font-bold mb-3 group-hover:text-orange-500 transition-colors duration-300">
+                  {article.title}
+                </h3>
+                
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  {article.excerpt}
+                </p>
+
+                <button
+                  onClick={() => navigate(`/news/${article.id}`)}
+                  className="text-orange-500 font-semibold hover:text-yellow-500 transition-colors duration-300"
+                >
+                  Read More →
+                </button>
               </div>
             </article>
           ))}
@@ -376,7 +357,6 @@ function Home() {
   return (
     <>
       <Hero />
-      
       <WhatWeDo />
       <About />
       <LatestNews />

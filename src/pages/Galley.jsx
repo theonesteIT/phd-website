@@ -25,14 +25,14 @@ function Gallery() {
     // Youth & Children
     { id: 9, url: '/images/events-worked/women6.jpg', category: 'youth', title: 'Kids Church', description: 'Training young disciples' },
     { id: 10, url: '/images/events-worked/women7.jpg', category: 'youth', title: 'Youth Conference', description: 'Empowering the next generation' },
-    // { id: 11, url: '/image11.jpg', category: 'youth', title: 'Bible Study', description: 'Growing in the Word' },
-    // { id: 12, url: '/image12.jpg', category: 'youth', title: 'Youth Sports Day', description: 'Fellowship and fun' },
+    { id: 11, url: '/images/events-worked/women8.jpg', category: 'youth', title: 'Bible Study', description: 'Growing in the Word' },
+    { id: 12, url: '/images/events-worked/women9.jpg', category: 'youth', title: 'Youth Sports Day', description: 'Fellowship and fun' },
     
-    // // Conferences & Events
-    // { id: 13, url: '/image13.jpg', category: 'events', title: 'Annual Conference', description: 'Gathering of believers' },
-    // { id: 14, url: '/image14.jpg', category: 'events', title: 'Leadership Summit', description: 'Equipping leaders' },
-    // { id: 15, url: '/image15.jpg', category: 'events', title: 'Easter Celebration', description: 'He is risen!' },
-    // { id: 16, url: '/image16.jpg', category: 'events', title: 'Christmas Service', description: 'Celebrating the Savior' },
+    // Conferences & Events
+    { id: 13, url: '/images/events-worked/photo10.jpg', category: 'events', title: 'Annual Conference', description: 'Gathering of believers' },
+    { id: 14, url: '/images/events-worked/photo11.jpg', category: 'events', title: 'Leadership Summit', description: 'Equipping leaders' },
+    { id: 15, url: '/image15.jpg', category: 'events', title: 'Easter Celebration', description: 'He is risen!' },
+    { id: 16, url: '/image16.jpg', category: 'events', title: 'Christmas Service', description: 'Celebrating the Savior' },
     
     // // Baptisms & Dedications
     // { id: 17, url: '/image17.jpg', category: 'baptism', title: 'Water Baptism', description: 'New life in Christ' },
@@ -61,12 +61,7 @@ function Gallery() {
 
   const categories = [
     { id: 'all', name: 'All Photos', icon: '🖼️' },
-    { id: 'worship', name: 'Worship', icon: '🙌' },
-    { id: 'outreach', name: 'Outreach', icon: '❤️' },
-    { id: 'youth', name: 'Youth', icon: '👥' },
-    { id: 'events', name: 'Events', icon: '🎉' },
-    { id: 'baptism', name: 'Baptisms', icon: '💧' },
-    { id: 'missions', name: 'Missions', icon: '🌍' },
+
   ]
 
   // Filter images by category

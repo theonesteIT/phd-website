@@ -4,11 +4,12 @@ import Home from './pages/Home.jsx'
 import AboutPage from './pages/About.jsx'
 import TeamPage from './pages/Team.jsx'
 import NewsPage from './pages/News.jsx'
+import NewsDetailsPage from './pages/NewsDetails.jsx'  // Add this
 import MinistriesPage from './pages/Ministries.jsx'
 import EventsPage from './pages/Events.jsx'
 import GivePage from './pages/Give.jsx'
 import ContactPage from './pages/Contact.jsx'
-import Gallery  from './pages/Galley.jsx'
+import Gallery from './pages/Galley.jsx'
 
 function NotFound() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/news" element={<NewsPage />} />
-        
+          <Route path="/news/:id" element={<NewsDetailsPage />} />  {/* Add this */}
           <Route path="/events" element={<EventsPage />} />
           <Route path="/give" element={<GivePage />} />
           <Route path="/gallery" element={<Gallery />} />
