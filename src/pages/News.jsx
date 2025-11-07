@@ -119,7 +119,7 @@ function News() {
     {
       id: 2,
       title: "PHDM Spreads Love and Rest Through Mattress Distribution for Women",
-      excerpt: "Join us as we come together to celebrate the true meaning of Christmas — love, hope, and giving. This special day will include heartful worship, a joyful community feast, and gift distribution to bless families in need.",
+      excerpt: "PHDM continues to bring hope and comfort to families in need through our Mattress Support Initiative. This program provides single mothers with essential bedding to ensure a safe and restful environment for their children. Beyond meeting immediate needs, this act of love reflects our mission to restore dignity, promote well-being, and strengthen families in our community.",
       image: "/images/events-worked/women6.jpg",
       category: "Event",
       date: "December 12, 2024",

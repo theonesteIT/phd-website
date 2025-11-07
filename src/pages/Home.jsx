@@ -207,7 +207,7 @@ function LatestNews() {
     {
       id: 3,
       title: "PHDM Provides Mutuelle de Santé for Families",
-      excerpt: "PHDM is proud to support vulnerable families by providing Mutuelle de Santé health insurance. This initiative ensures that every family has access to essential healthcare services.",
+      excerpt: "PHDM continues to bring hope and comfort to families in need through our Mattress Support Initiative. This program provides single mothers with essential bedding to ensure a safe and restful environment for their children. Beyond meeting immediate needs, this act of love reflects our mission to restore dignity, promote well-being, and strengthen families in our community.",
       image: "/images/news/3.jpg",
       category: "Community",
       date: "December 10, 2024",

@@ -19,7 +19,7 @@ function NewsDetails() {
         "/images/events-worked/women1.jpg",
         "/images/events-worked/women2.jpg",
         "/images/events-worked/women3.jpg",
-        "/images/events-worked/women4.jpg"
+        
       ],
       content: [
         {
@@ -52,7 +52,7 @@ function NewsDetails() {
         "/images/events-worked/women6.jpg",
         "/images/events-worked/women5.jpg",
         "/images/events-worked/women7.jpg",
-        "/images/events-worked/women8.jpg"
+        
       ],
       content: [
         {
@@ -83,9 +83,9 @@ function NewsDetails() {
       mainImage: "/images/news/3.jpg",
       gallery: [
         "/images/news/3.jpg",
-        "/images/news/health1.jpg",
-        "/images/news/health2.jpg",
-        "/images/news/health3.jpg"
+        "/images/news/1.jpg",
+        "/images/news/2.jpg",
+        "/images/news/4.jpg"
       ],
       content: [
         {

@@ -230,7 +230,7 @@ function AboutPage() {
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <span className="text-2xl">❤️</span>
+                      <span className="text-2xl">.</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Healing</h3>
@@ -239,22 +239,14 @@ function AboutPage() {
                   </div>
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <span className="text-2xl">📖</span>
+                      <span className="text-2xl">.</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Discipleship</h3>
                       <p className="text-gray-600">Growing in Christ through teaching and mentorship</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-4 md:col-span-2 max-w-md mx-auto">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-lg">
-                      <span className="text-2xl">🤝</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-yellow-400 text-transparent bg-clip-text mb-2">Compassion</h3>
-                      <p className="text-gray-600">Love in action, serving others with kindness and grace</p>
-                    </div>
-                  </div>
+               
                 </div>
               </div>
             </div>
